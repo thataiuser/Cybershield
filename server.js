@@ -44,6 +44,7 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model("User", userSchema);
 
 const app = express();
+app.set("trust proxy", 1);
 app.use(helmet());
 app.use(express.json({ limit: "20kb" }));
 app.use(cookieParser());
