@@ -1,0 +1,11 @@
+// "Spot the Phish" scenarios. phish = true means the message is a scam.
+module.exports = [
+ {id:"g1",from:"security@paypa1-support.com",subject:"Your account is limited – act within 24h",body:"We noticed unusual activity. Click here to verify your identity or your account will be permanently closed.",phish:true,why:"Look-alike domain (paypa1), threat and a deadline."},
+ {id:"g2",from:"hr@yourcompany.com",subject:"Updated leave policy (no action needed)",body:"Hi team, the updated leave policy is now on the intranet under HR > Policies. Please read it when convenient.",phish:false,why:"Known sender, no link or request, points to a place you already use."},
+ {id:"g3",from:"MTN MoMo <info@momo-prize.net>",subject:"You WON 500,000 FCFA!",body:"Congratulations! To receive your prize, reply with your mobile-money PIN and full name.",phish:true,why:"Nobody legitimate asks for your PIN, and prizes you never entered are scams."},
+ {id:"g4",from:"no-reply@github.com",subject:"New sign-in from Chrome on Windows",body:"If this was you, no action is needed. If not, visit github.com/settings/security directly to review your sessions.",phish:false,why:"No urgent link; it tells you to go to the site yourself."},
+ {id:"g5",from:"CEO <ceo.office@gmail.com>",subject:"Urgent: transfer needed, keep confidential",body:"I'm in a meeting and cannot talk. Buy gift cards worth 300,000 FCFA and send me the codes today.",phish:true,why:"Executive impersonation from a free email address, secrecy and an odd payment method."},
+ {id:"g6",from:"it-helpdesk@yourcompany.com",subject:"Scheduled maintenance Saturday 22:00",body:"The mail server will be offline for about 30 minutes this Saturday. No action required.",phish:false,why:"Informational, expected sender, nothing asked of you."},
+ {id:"g7",from:"Orange Money <alerts@orange-verify.co>",subject:"SIM will be deactivated",body:"Your SIM is flagged. Download the attached verification form (Verify.exe) and run it now.",phish:true,why:"An .exe attachment and a deactivation threat from an unofficial domain."},
+ {id:"g8",from:"library@university.edu",subject:"Book due reminder",body:"Your borrowed book is due on Friday. Log in to the library portal you normally use to renew it.",phish:false,why:"Routine reminder with no link and a normal request."}
+];
